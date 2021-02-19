@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/normalize.css">
+   <link rel="stylesheet" href="index.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Play:wght@700&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./assets/css/swiper.css">
+   <title>Тестовое задание АБВ</title>
+</head>
+
+<body>
+
+   <!-- header -->
+   <header class="header">
+      <div class="header__wrapper">
+
+         <!-- menu -->
+         <nav class="header__menu">
+            <ul class="header__list">
+               <li class="header__list__item">
+                  <a href="#banner">Главная</a>
+               </li>
+               <li class="header__list__item">
+                  <a href="#slider">Слайдер</a>
+               </li>
+               <li class="header__list__item">
+                  <a href="#cards">Карточки</a>
+               </li>
+               <li class="header__list__item">
+                  <a href="#form">Форма</a>
+               </li>
+               <li class="header__list__item">
+                  <a href="#list">Список</a>
+               </li>
+               <li class="header__list__item">
+                  <a href="#" class="modal__button">Модалка</a>
+               </li>
+            </ul>
+         </nav>
+         <!-- / menu -->
+
+      </div>
+
+
+   </header>
+   <!-- / header -->
+
+   <!-- content -->
+   <main class="main">
+
+      <!-- banner with modal window -->
+      <section class="banner" id="banner">
+
+         <div class="banner__background">
+            <img src="./assets/img/banner.png" alt="">
+         </div>
+
+         <div class="banner__wrapper">
+            <div class="banner__content">
+               <h2 class="banner__title">
+                  ТЕСТОВОЕ ЗАДАНИЕ <br>
+                  АБВ! СТУДИЯ
+               </h2>
+               <button class="banner__button modal__button">
+                  Модальное окно
+               </button>
+            </div>
+         </div>
+      </section>
+      <!-- / banner with modal window -->
+
+      <!-- slider -->
+      <section class="slider" id="slider">
+         <div class="slider__wrapper">
+            <a href="" class="slider__title">
+               СЛАЙДЕР
+            </a>
+            <div class="slider__content">
+               <!-- Slider main container -->
+               <div class="swiper-container slider__swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper slider__sub-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide slider__slide">
+                        <img class="slider__image"
+                           src="./assets/img/slider_imgs/85428-water-city-skyline-urban_area-reflection-3840x2160 1.png"
+                           alt="slider image">
+                     </div>
+                     <div class="swiper-slide slider__slide">
+                        <img class="slider__image" src="./assets/img/slider_imgs/2.jpg" alt="slider image">
+                     </div>
+                     <div class="swiper-slide slider__slide">
+                        <img class="slider__image" src="./assets/img/slider_imgs/3.webp" alt="slider image">
+                     </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                  <!-- If we need scrollbar -->
+                  <!-- <div class="swiper-scrollbar"></div> -->
+               </div>
+
+            </div>
+         </div>
+      </section>
+      <!-- / slider -->
+
+      <!-- cards -->
+      <section class="cards" id="cards">
+         <div class="cards__wrapper">
+            <a href="" class="cards__title">
+               КАРТОЧКИ
+            </a>
+            <div class="cards__content">
+
+               <div class="swiper-container cards__swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper cards__sub-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide cards__item">
+                        <div class="cards__item__header-text">
+                           Услуга 1
+                        </div>
+                        <div class="cards__item__content">
+                           <img src="./assets/img/cards_imgs/1.png" alt="card image" class="cards__item__img">
+                        </div>
+                        <button class="cards__item__button modal__button">
+                           Модальное окно
+                        </button>
+                     </div>
+                     <div class="swiper-slide cards__item">
+                        <div class="cards__item__header-text">
+                           Услуга 2
+                        </div>
+                        <div class="cards__item__content">
+                           <img src="./assets/img/cards_imgs/1.png" alt="card image" class="cards__item__img">
+                        </div>
+                        <button class="cards__item__button modal__button">
+                           Модальное окно
+                        </button>
+                     </div>
+                     <div class="swiper-slide cards__item">
+                        <div class="cards__item__header-text">
+                           Услуга 3
+                        </div>
+                        <div class="cards__item__content">
+                           <img src="./assets/img/cards_imgs/1.png" alt="card image" class="cards__item__img">
+                        </div>
+                        <button class="cards__item__button modal__button">
+                           Модальное окно
+                        </button>
+                     </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev cards__prev"></div>
+                  <div class="swiper-button-next cards__next"></div>
+
+                  <!-- If we need scrollbar -->
+                  <!-- <div class="swiper-scrollbar"></div> -->
+               </div>
+
+            </div>
+         </div>
+      </section>
+      <!-- / cards -->
+
+      <!-- form -->
+      <h4 id="form">
+         <a href="" class="form__title">
+            ФОРМА
+         </a>
+      </h4>
+
+      <section class="form" >
+         <div class="form__wrapper">
+            <div class="form__content">
+               <form class="form__contact" id="form">
+                  <p class="form__contact__title">
+                     Стандартная форма обратной связи
+                  </p>
+                  <div class="form__contact__2wrapper">
+                     <label for="name">
+                        <input class="" type="text" name="name" required placeholder="Ваше Имя*">
+                     </label>
+                     <label for="number">
+                        <input type="tel" name="phone_num" required placeholder="Ваш Номер*">
+                     </label>
+                  </div>
+                  <div class="form__contact__message">
+                     <label for="message">
+                        <!-- <textarea  placeholder="Сообщение"> -->
+                        <textarea name="message" placeholder="Сообщение"></textarea>
+                     </label>
+                  </div>
+                  <button class="form__contact__button" type="submit">
+                     Отправить
+                  </button>
+               </form>
+            </div>
+         </div>
+      </section>
+      <!-- / form -->
+
+      <!-- list -->
+      <section class="list" id="list">
+         <div class="list__wrapper">
+            <a href="" class="list__title">
+               СПИСОК
+            </a>
+            <div class="list__content">
+               <div class="list__item">
+                  <div class="list__header">
+                     <div class="list__header__text">Список 1</div>
+                     <div class="list__header__button"></div>
+                  </div>
+                  <div class="list__textblock">
+                     <p class="list__text">
+                        Описание
+                     </p>
+                  </div>
+               </div>
+               <div class="list__item">
+                  <div class="list__header">
+                     <div class="list__header__text">Список 2</div>
+                     <div class="list__header__button"></div>
+                  </div>
+                  <div class="list__textblock">
+                     <p class="list__text">
+                        Описание
+                     </p>
+                  </div>
+               </div>
+               <div class="list__item">
+                  <div class="list__header">
+                     <div class="list__header__text">Список 3</div>
+                     <div class="list__header__button"></div>
+                  </div>
+                  <div class="list__textblock">
+                     <p class="list__text">
+                        Описание
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- / list -->
+
+      <!-- MODAL WINDOW -->
+
+         <!-- Trigger/Open The Modal -->
+         <!-- <button class="modal__button">Open Modal</button> -->
+
+         <!-- The Modal -->
+         <div id="modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal__content">
+               <div class="modal__header">
+                  <span class="modal__close">&times;</span>
+               </div>
+               <div class="modal__body">
+                  <p class="modal__text">
+                     МОДАЛКА
+                  </p>
+               </div>
+            </div>
+
+         </div>
+
+      <!-- / MODAL WINDOW -->
+
+   </main>
+   <!-- / content -->
+
+   <!-- footer -->
+   <footer class="footer">
+
+      <!-- menu -->
+      <nav class="footer__menu">
+         <ul class="footer__list">
+            <li class="footer__list__item">
+               <a href="#">Главная</a>
+            </li>
+            <li class="footer__list__item">
+               <a href="#">Слайдер</a>
+            </li>
+            <li class="footer__list__item">
+               <a href="#">Карточки</a>
+            </li>
+            <li class="footer__list__item">
+               <a href="#">Форма</a>
+            </li>
+            <li class="footer__list__item">
+               <a href="#">Список</a>
+            </li>
+            <li class="footer__list__item">
+               <a href="#">Модалка</a>
+            </li>
+         </ul>
+      </nav>
+      <!-- menu -->
+
+   </footer>
+   <!-- / footer -->
+
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="main.js"></script>
+
+</body>
+
+</html>

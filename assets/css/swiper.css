@@ -1,0 +1,30 @@
+.swiper-button-prev, .swiper-button-next {
+    color: #fff;
+    width: 75px;
+    height: 75px;
+    background-color: #AEA59E;
+    top: calc( 50% - 15px);
+}
+
+.swiper-button-prev {
+    margin-left: 20px;
+}
+
+.swiper-button-next {
+    margin-right: 20px;
+}
+
+.swiper-button-prev:active, .swiper-button-next:active {
+    transform: scale(0.8);
+    transition: all .2s ease;
+    background-color: #5e5955;
+}
+
+/* Вынес этот класс сюда, чтобы не приписывать !important */
+.slider__sub-wrapper {
+    height: 600px;
+}
+
+.cards__sub-wrapper {
+    height: 461px;
+}

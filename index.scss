@@ -1,0 +1,538 @@
+
+// === VARIABLES ===
+
+$grey-dark: #282828;
+
+// === / VARIABLES ===
+
+// === MIXINS ===
+
+@mixin wrapper {
+    &__wrapper {
+        margin: 0 auto;
+        width: 1100px;
+    }
+}
+
+@mixin title {
+    &__title {
+        margin: 2.8125rem 0;
+        font-family: 'Play', sans-serif;
+        font-size: 5.3125rem;
+        text-decoration: none;
+        color: #000;
+        display: block;
+    }
+}
+
+@mixin button {
+    background: #AEA59E;
+    border-radius: 15px;
+    width: fit-content;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all .3s ease;
+    cursor: pointer;
+    line-height: 2rem;
+
+    &:hover {
+        box-shadow: 0 0 0 1px rgb(51, 51, 51);
+        transition: all .3s ease;
+    }
+
+    &:active {
+        transition: all 0.1s ease;
+        background-color: #615c59;
+        transform: scale(0.95);
+    }
+
+}
+
+// === / MIXINS ===
+
+// === COMMON ===
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+// === / COMMON ===
+
+// === CONTENT ===
+
+
+.header , .footer {
+    background-color: $grey-dark;
+    
+    &__menu {
+        margin: 0 auto;
+        width: 1100px;
+    }
+
+    &__list {
+        width: 1032px;
+        padding: 18px 0 17px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+
+        &__item {
+            list-style-type: none;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+
+            & a {
+                color: #fff;
+                text-decoration: none;
+
+                background-image: linear-gradient(#fff, #fff);
+                background-position: 0% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size .3s;
+
+                &:hover {
+                    background-size: 100% 2px;
+                }
+            }
+
+
+        }
+    }
+}
+
+.main {
+    padding-top: 60px;
+}
+
+.header {
+    @include wrapper;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+// === BANNER ===
+
+.banner {
+    @include wrapper;
+
+    height: 900px;
+    position: relative;
+
+    &__wrapper {
+        position: relative;
+        height: 100%;
+    }
+
+    &__background {
+
+        position: absolute;
+        height: 100%;
+        z-index: -1;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.46;
+        }
+
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__title {
+        font-family: 'Play', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5.3125rem;
+        line-height: 6.125rem;
+        color: #fff;
+        margin: 0;
+    }
+
+    &__button {
+        margin-top: 2.25rem;
+        padding: 1rem 2.75rem;
+
+        @include button;
+    }
+}
+
+// === / BANNER ===
+
+// === SLIDER ===
+
+.slider {
+    @include wrapper;
+
+    @include title;
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+
+}
+
+// === / SLIDER ===
+
+// === CARDS ===
+
+.cards {
+    @include wrapper;
+
+    @include title;
+
+    &__item {
+        background-color: #C4C4C4;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: background-color 0.3s ease-out;
+        transition-property: all!important;
+
+        &:hover {
+            background-color: #dddddd;
+        }
+
+
+        &__header-text {
+            padding-top: 6rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        &__content {
+            margin: 0.625rem 0 2.375rem;
+        }
+
+        &__button {
+
+            @include button;
+            padding: 1rem 2.75rem;
+        }
+    }
+
+    & .swiper-button-prev {
+        margin-left: 0;
+        left: 0;
+    }
+
+    & .swiper-button-next {
+        margin-right: 0;
+        right: 0;
+    }
+}
+
+// === / CARDS ===
+
+// === FORM ===
+
+.form {
+    @include wrapper;
+
+    @include title;
+
+    background-color: $grey-dark;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        margin: 0 auto;
+        width: 1100px;
+        background-color: transparent;
+    }
+
+    &__content {
+        width: 920px;
+        margin-bottom: 28px;
+    }
+
+    &__contact {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &__title {
+            font-size: 1.125rem;
+            margin: 3.125rem 0;
+            color: #fff;
+        }
+
+        &__button {
+            padding: 1rem 4rem;
+
+            @include button
+        }
+
+        &__2wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 22px;
+
+            & label {
+                width: calc(50% - 15px);
+            }
+
+
+        }
+
+        & input, textarea {
+            // width: 100%;
+            background-color: #E5E5E5;
+            padding: 1.25rem 3.125rem;
+            width: -webkit-fill-available;
+            border-radius: 15px;
+            border: transparent;
+            font-weight: bold;
+            font-size: 1.125rem;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $grey-dark;
+                
+            }
+        }
+
+        &__message {
+            width: 100%;
+            margin-bottom: 1.375rem;
+
+            & textarea {
+                min-height: 135px;
+                resize: none;
+
+            }
+        }
+    }
+
+
+}
+
+// === / FORM ===
+
+// === LIST ===
+
+.list {
+    @include wrapper;
+
+    @include title;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.875rem;
+
+        &.active {
+
+            & .list__textblock {
+                display:block;
+                min-height:none;
+                max-height:none;
+                transition: all .4s ease;
+                animation: list-anim 1s;
+            }
+
+            & .list__header__button::after {
+                transform: rotate(0deg);
+            }
+
+            & .list__header__button::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__header {
+        padding: 1.75rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #C4C4C4;
+        align-items: center;
+
+        &__text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        &__button {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                background-color: $grey-dark;
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                left: 0;
+                top: 50%;
+                transition: all 0.4s ease-out;
+            }
+
+            &::after {
+                content: '';
+                background-color: $grey-dark;
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                left: 0;
+                transform: rotate(90deg);
+                top: 50%;
+                transition: all 0.4s ease;
+            }
+
+
+        }
+    }
+
+    &__textblock {
+        background-color: #E5E5E5;
+        // height: 0;
+        // opacity: 0;
+        // display: none;
+        // transition: max-height ease-in-out .3s,opacity ease-in-out .3s;
+        display:none;
+        min-height: 0;
+        max-height: 0;
+        overflow:hidden;
+        transition: all 0.4s ease;
+
+        animation: list-anim;
+    }
+
+    &__text {
+        padding: 3.125rem 2.5rem;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 400;
+    }
+}
+
+// === / LIST ===
+
+// === MODAL WINDOW ===
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    /* Modal Content */
+    &__content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 750px;
+        height: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    
+    /* The Close Button */
+    &__close {
+        color: #000;
+        float: right;
+        font-size: 56px;
+        font-weight: bold;
+        padding: 1rem 1rem 0 0 ;
+
+        &:hover , &:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;           
+        }
+    }
+
+    &__body {
+        display: grid;
+        place-items: center;
+        height: 100%;
+    }
+
+    &__text {
+        font-family: 'Play', sans-serif;
+        font-size: 5.3125rem;
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+// === / CONTENT ===
+
+// === ANIMATIONS ===
+
+@keyframes list-anim {
+    0% {
+        display: none;
+        opacity: 0;
+        height: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+        max-height: 1px;
+    }
+
+    20% {
+        max-height: 500px;
+    }
+
+    100% {
+        display: block;
+        max-height: none;
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
