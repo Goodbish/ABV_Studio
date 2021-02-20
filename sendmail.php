@@ -24,7 +24,7 @@ try {
 
     //Recipients
     $mail->setFrom('nar115@mail.ru', 'Daniil Bannikov');
-    $mail->addAddress('goodbish@mail.ru');     // Add a recipient          // Name is optional
+    $mail->addAddress('test@abvstudio.ru');     // Add a recipient          // Name is optional
 
     // Attachments
     // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments

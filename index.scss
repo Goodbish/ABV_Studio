@@ -28,6 +28,21 @@ $grey-dark: #282828;
     }
 }
 
+@mixin nav-links {
+    color: #fff;
+    text-decoration: none;
+
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+
+    &:hover {
+        background-size: 100% 2px;
+    }
+}
+
 @mixin title {
     &__title {
         margin: 2.8125rem 0;
@@ -104,31 +119,31 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 0;
+    }
 
-        &__item {
-            list-style-type: none;
+    &__item {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+
+        & > .modal__button {
+            border: none;
             font-weight: bold;
-            font-size: 18px;
-            line-height: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: transparent;
+            padding: 0;
 
-            & a {
-                color: #fff;
-                text-decoration: none;
-
-                background-image: linear-gradient(#fff, #fff);
-                background-position: 0% 100%;
-                background-repeat: no-repeat;
-                background-size: 0% 2px;
-                transition: background-size .3s;
-
-                &:hover {
-                    background-size: 100% 2px;
-                }
-            }
-
-
+            @include nav-links;
         }
     }
+
+    &__link {
+        @include nav-links;
+    }
+
+
 }
 
 .main {
@@ -139,13 +154,16 @@ body {
     @include wrapper;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 9;
+
 }
 
 // === BANNER ===
 
 .banner {
     @include wrapper;
+
+    background: url("./assets/img/banner2.png");
 
     height: 900px;
     position: relative;
@@ -383,8 +401,8 @@ body {
                 display:block;
                 min-height:none;
                 max-height:none;
-                transition: all .4s ease;
-                animation: list-anim 1s;
+                transition: all 0.4s ease;
+                animation: list-anim 0.4s;
             }
 
             & .list__header__button::after {
@@ -451,12 +469,7 @@ body {
         // display: none;
         // transition: max-height ease-in-out .3s,opacity ease-in-out .3s;
         display:none;
-        min-height: 0;
-        max-height: 0;
         overflow:hidden;
-        transition: all 0.4s ease;
-
-        animation: list-anim;
     }
 
     &__text {
@@ -475,7 +488,7 @@ body {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 10; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -680,21 +693,22 @@ body {
         display: none;
         opacity: 0;
         height: 0;
+        visibility: hidden;
     }
 
     1% {
         display: block;
         opacity: 0;
-        max-height: 1px;
+        height: 1px;
+        visibility: hidden;
     }
 
-    20% {
-        max-height: 500px;
+    99% {
+        visibility: initial;
+        height: 175px;
     }
 
     100% {
-        display: block;
-        max-height: none;
         opacity: 1;
         height: 100%;
     }

@@ -21,33 +21,33 @@
    <header class="header">
       <div class="header__wrapper">
 
-         <!-- burger menu ( < 768px ) -->
-         <div class="header__burger">
+         <!-- burger menu ( < 768px ) пока эти размеры не поддерживаются -->
+         <!-- <div class="header__burger">
             <span></span>
-         </div>
+         </div> -->
 
          <!-- / burger menu ( < 768px ) -->
 
          <!-- menu -->
          <nav class="header__menu">
             <ul class="header__list">
-               <li class="header__list__item">
-                  <a href="#banner">Главная</a>
+               <li class="header__item">
+                  <a class="header__link" href="#banner">Главная</a>
                </li>
-               <li class="header__list__item">
-                  <a href="#slider">Слайдер</a>
+               <li class="header__item">
+                  <a class="header__link" href="#slider">Слайдер</a>
                </li>
-               <li class="header__list__item">
-                  <a href="#cards">Карточки</a>
+               <li class="header__item">
+                  <a class="header__link" href="#cards">Карточки</a>
                </li>
-               <li class="header__list__item">
-                  <a href="#form">Форма</a>
+               <li class="header__item">
+                  <a class="header__link" href="#form">Форма</a>
                </li>
-               <li class="header__list__item">
-                  <a href="#list">Список</a>
+               <li class="header__item">
+                  <a class="header__link" href="#list">Список</a>
                </li>
-               <li class="header__list__item">
-                  <a href="#" class="modal__button">Модалка</a>
+               <li class="header__item">
+                  <button class="modal__button">Модалка</button>
                </li>
             </ul>
          </nav>
@@ -64,11 +64,6 @@
 
       <!-- banner with modal window -->
       <section class="banner" id="banner">
-
-         <div class="banner__background">
-            <img src="./assets/img/banner.png" alt="">
-         </div>
-
          <div class="banner__wrapper">
             <div class="banner__content">
                <h2 class="banner__title">
@@ -199,7 +194,7 @@
                         <input class="" type="text" name="name" required placeholder="Ваше Имя*">
                      </label>
                      <label for="number">
-                        <input type="tel" name="phone_num" required placeholder="Ваш Номер*">
+                        <input type="tel" name="phone_num" required placeholder="Ваш Номер*" pattern="[0-9]{,11}">
                      </label>
                   </div>
                   <div class="form__contact__message">
@@ -291,23 +286,23 @@
       <!-- menu -->
       <nav class="footer__menu">
          <ul class="footer__list">
-            <li class="footer__list__item">
-               <a href="#banner">Главная</a>
+            <li class="footer__item">
+               <a class="footer__link" href="#banner">Главная</a>
             </li>
-            <li class="footer__list__item">
-               <a href="#slider">Слайдер</a>
+            <li class="footer__item">
+               <a class="footer__link" href="#slider">Слайдер</a>
             </li>
-            <li class="footer__list__item">
-               <a href="#cards">Карточки</a>
+            <li class="footer__item">
+               <a class="footer__link" href="#cards">Карточки</a>
             </li>
-            <li class="footer__list__item">
-               <a href="#form">Форма</a>
+            <li class="footer__item">
+               <a class="footer__link" href="#form">Форма</a>
             </li>
-            <li class="footer__list__item">
-               <a href="#list">Список</a>
+            <li class="footer__item">
+               <a class="footer__link" href="#list">Список</a>
             </li>
-            <li class="footer__list__item">
-               <a href="#" class="modal__button">Модалка</a>
+            <li class="footer__item">
+               <button class="modal__button">Модалка</button>
             </li>
          </ul>
       </nav>
