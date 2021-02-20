@@ -3,6 +3,11 @@ body {
   font-size: 16px;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .header, .footer {
   background-color: #282828;
 }
@@ -62,6 +67,20 @@ body {
   width: 1100px;
 }
 
+@media (max-width: 1140px) {
+  .header__wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .banner {
   height: 900px;
   position: relative;
@@ -70,6 +89,20 @@ body {
 .banner__wrapper {
   margin: 0 auto;
   width: 1100px;
+}
+
+@media (max-width: 1140px) {
+  .banner__wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .banner__wrapper {
@@ -153,6 +186,20 @@ body {
   width: 1100px;
 }
 
+@media (max-width: 1140px) {
+  .slider__wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider__wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .slider__title {
   margin: 2.8125rem 0;
   font-family: 'Play', sans-serif;
@@ -160,6 +207,14 @@ body {
   text-decoration: none;
   color: #000;
   display: block;
+}
+
+@media (max-width: 1140px) {
+  .slider__title {
+    margin: 2.5rem 1rem;
+    font-family: 'Play', sans-serif;
+    font-size: 5rem;
+  }
 }
 
 .slider__image {
@@ -174,6 +229,20 @@ body {
   width: 1100px;
 }
 
+@media (max-width: 1140px) {
+  .cards__wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards__wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .cards__title {
   margin: 2.8125rem 0;
   font-family: 'Play', sans-serif;
@@ -181,6 +250,14 @@ body {
   text-decoration: none;
   color: #000;
   display: block;
+}
+
+@media (max-width: 1140px) {
+  .cards__title {
+    margin: 2.5rem 1rem;
+    font-family: 'Play', sans-serif;
+    font-size: 5rem;
+  }
 }
 
 .cards__item {
@@ -268,6 +345,20 @@ body {
   width: 1100px;
 }
 
+@media (max-width: 1140px) {
+  .form__wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form__wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .form__title {
   margin: 2.8125rem 0;
   font-family: 'Play', sans-serif;
@@ -275,6 +366,14 @@ body {
   text-decoration: none;
   color: #000;
   display: block;
+}
+
+@media (max-width: 1140px) {
+  .form__title {
+    margin: 2.5rem 1rem;
+    font-family: 'Play', sans-serif;
+    font-size: 5rem;
+  }
 }
 
 .form__wrapper {
@@ -370,6 +469,8 @@ body {
   background-color: #E5E5E5;
   padding: 1.25rem 3.125rem;
   width: -webkit-fill-available;
+  width: -moz-available;
+  width: available;
   border-radius: 15px;
   border: transparent;
   font-weight: bold;
@@ -411,6 +512,20 @@ body {
   width: 1100px;
 }
 
+@media (max-width: 1140px) {
+  .list__wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .list__wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .list__title {
   margin: 2.8125rem 0;
   font-family: 'Play', sans-serif;
@@ -418,6 +533,14 @@ body {
   text-decoration: none;
   color: #000;
   display: block;
+}
+
+@media (max-width: 1140px) {
+  .list__title {
+    margin: 2.5rem 1rem;
+    font-family: 'Play', sans-serif;
+    font-size: 5rem;
+  }
 }
 
 .list__item {
@@ -591,6 +714,40 @@ body {
   font-size: 5.3125rem;
   text-decoration: none;
   color: #000;
+}
+
+@media (max-width: 1140px) {
+  .header__menu, .footer__menu {
+    width: 768px;
+  }
+  .header__list, .footer__list {
+    width: 768px;
+    padding: 18px 1rem 17px;
+  }
+  .banner__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .banner__title {
+    text-align: center;
+  }
+  .form__title {
+    width: 768px;
+    padding-left: 1rem;
+    margin: 0 auto;
+    font-family: 'Play', sans-serif;
+    font-size: 5rem;
+  }
+  .form__contact {
+    padding: 0 1rem;
+  }
+  .cards__content {
+    padding: 0 1rem;
+  }
+  .list__item {
+    padding: 0 1rem;
+  }
 }
 
 @-webkit-keyframes list-anim {
