@@ -8,16 +8,20 @@ body {
           box-sizing: border-box;
 }
 
-.header, .footer {
+.footer {
   background-color: #282828;
 }
 
-.header__menu, .footer__menu {
+.nav__wrapper {
+  background-color: #282828;
+}
+
+.nav__menu {
   margin: 0 auto;
   width: 1100px;
 }
 
-.header__list, .footer__list {
+.nav__list {
   width: 1032px;
   padding: 18px 0 17px;
   display: -webkit-box;
@@ -29,14 +33,14 @@ body {
   margin: 0;
 }
 
-.header__item, .footer__item {
+.nav__item {
   list-style-type: none;
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
 }
 
-.header__item > .modal__button, .footer__item > .modal__button {
+.nav__item > .modal__button {
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -54,11 +58,11 @@ body {
   transition: background-size .3s;
 }
 
-.header__item > .modal__button:hover, .footer__item > .modal__button:hover {
+.nav__item > .modal__button:hover {
   background-size: 100% 2px;
 }
 
-.header__link, .footer__link {
+.nav__link {
   color: #fff;
   text-decoration: none;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
@@ -70,7 +74,7 @@ body {
   transition: background-size .3s;
 }
 
-.header__link:hover, .footer__link:hover {
+.nav__link:hover {
   background-size: 100% 2px;
 }
 
@@ -433,13 +437,14 @@ body {
   width: 100%;
 }
 
-.form__contact__title {
+.form__title {
   font-size: 1.125rem;
   margin: 3.125rem 0;
   color: #fff;
+  text-align: center;
 }
 
-.form__contact__button {
+.form__button {
   padding: 1rem 4rem;
   background: #AEA59E;
   border-radius: 15px;
@@ -456,14 +461,14 @@ body {
   line-height: 2rem;
 }
 
-.form__contact__button:hover {
+.form__button:hover {
   -webkit-box-shadow: 0 0 0 1px #333333;
           box-shadow: 0 0 0 1px #333333;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.form__contact__button:active {
+.form__button:active {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   background-color: #615c59;
@@ -471,7 +476,7 @@ body {
           transform: scale(0.95);
 }
 
-.form__contact__2wrapper {
+.form__2wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,11 +489,11 @@ body {
   margin-bottom: 22px;
 }
 
-.form__contact__2wrapper label {
+.form__2wrapper label {
   width: calc(50% - 15px);
 }
 
-.form__contact input, .form__contact textarea {
+.form input, .form textarea {
   background-color: #E5E5E5;
   padding: 1.25rem 3.125rem;
   width: -webkit-fill-available;
@@ -500,32 +505,32 @@ body {
   font-size: 1.125rem;
 }
 
-.form__contact input:focus, .form__contact textarea:focus {
+.form input:focus, .form textarea:focus {
   outline: none;
 }
 
-.form__contact input::-webkit-input-placeholder, .form__contact textarea::-webkit-input-placeholder {
+.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
   color: #282828;
 }
 
-.form__contact input:-ms-input-placeholder, .form__contact textarea:-ms-input-placeholder {
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
   color: #282828;
 }
 
-.form__contact input::-ms-input-placeholder, .form__contact textarea::-ms-input-placeholder {
+.form input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
   color: #282828;
 }
 
-.form__contact input::placeholder, .form__contact textarea::placeholder {
+.form input::placeholder, .form textarea::placeholder {
   color: #282828;
 }
 
-.form__contact__message {
+.form__message {
   width: 100%;
   margin-bottom: 1.375rem;
 }
 
-.form__contact__message textarea {
+.form__message textarea {
   min-height: 135px;
   resize: none;
 }
